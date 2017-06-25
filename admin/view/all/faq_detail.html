@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Admin | FAQ</title>
+<link href="dist/img/favicon.ico" rel="icon" type="/ico" />
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- Theme style -->
+<link rel="stylesheet" href="dist/css/AdminLTE.css">
+<!-- Main style -->
+<link rel="stylesheet" href="dist/css/style.css">
+<link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+<!-- iCheck -->
+<link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+<!-- jqueryUI -->
+<link type="text/css" rel="stylesheet" href="dist/css/jquery-ui.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="plugins/iCheck/all.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper"> 
+  <!-- Header -->
+  <header id="main_header" class="main-header"></header>
+  <!-- Left Sidebar -->
+  <aside id="main_sidebar" class="main-sidebar"></aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"> 
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1><b>FAQ</b></h1>
+    </section>
+    
+    <!-- Main content -->
+    <section class="content"> 
+      <!-- Small boxes (Stat box) -->
+      
+      <div class="Form_Inside management_page">
+        <div class="member_page accordion_style notice_table">
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th class="gray">Type</th>
+                <td>TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle</td>
+              </tr>
+              <tr>
+                <th class="gray">Date</th>
+                <td>2016. 01. 01</td>
+              </tr>
+              <tr>
+                <th class="gray">File</th>
+                <td>Test.pdf</td>
+              </tr>
+              <tr>
+                <th class="gray">Contents</th>
+                <td><p>Second, users can apply the powerful capabilities of Auto Campaigns to their mobile app. Auto Campaigns lets users set their marketing on autopilot by establishing rules and their subsequent actions that are automatically initiated when certain conditions are met. For example, users can now automatically send a reminder to individuals who haven't opened a message, a week after it was sent, or a coupon exactly 48 hours before each member's actual birthday. They can send a stronger coupon to VIP customers who haven't redeemed the first one in 2 weeks. Or, they can trigger automatic reminders to be sent a week after the qualifying purchase about being only 1 point away from a prize."These new updates greatly enhance how our users can use their mobile apps," said Ken Rhie, the CEO of Trumpia. "Opening it up to iPhone users nearly doubles the potential downloads, and Auto Campaigns will save any Trumpia user time and energy by automating marketing tasks."</p>
+                  <div class="Cover_notice"> <img src="dist/img/notice_cover.jpg" alt="" title="" class="img-responsive" /> </div></td>
+              </tr>
+            </table>
+          </div>
+          <div class="row footer_btn">
+            <div class="col-sm-4">
+              <div class="pull-left"> <a href="customer_management.html" class="btn btn-outline">Back to List</a> </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="pull-right"> <a href="#" class="btn btn-info">Edit</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content --> 
+  </div>
+  <!-- /.content-wrapper -->
+  
+  <footer id="main_footer" class="main-footer"></footer>
+  <!-- change level Modal --> 
+  
+</div>
+<!-- ./wrapper --> 
+
+<!-- jQuery 2.2.3 --> 
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script> 
+<!-- Bootstrap 3.3.6 --> 
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	// header, footer and left part attachment
+	jQuery("#main_header").load("inc/header.html");
+	jQuery("#main_sidebar").load("inc/LeftSidebar.html");
+	jQuery("#main_footer").load("inc/footer.html");
+	
+	// Menu active function
+	jQuery(".sidebar-menu > li").click(function() {
+	  // remove classes from all
+	  jQuery(".sidebar-menu > li").removeClass("active");
+	  // add class to the one we clicked
+	  jQuery(this).addClass("active");
+	});
+	
+	$('select:focus').prev().css('background-color', '#eee');
+	
+	// Date function
+	$("#startdate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});
+	$("#enddate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});
+	$("#licensestartdate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});
+	$("#licenseenddate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});	
+	
+	// Calender function
+	$('.fa-calendar').click(function() {
+		var datepickerID = $(this).parent().find('input').attr('id');
+		$("#" + datepickerID).focus();
+	});	
+	
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+	
+// Input file function
+	
+'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));	
+});
+</script> 
+
+<!-- AdminLTE App --> 
+<script src="dist/js/app.min.js"></script> 
+
+<!-- SlimScroll 1.3.0 --> 
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script> 
+<!-- iCheck 1.0.1 --> 
+<script src="plugins/iCheck/icheck.min.js"></script> 
+<!-- AdminLTE for demo purposes --> 
+<script src="dist/js/demo.js"></script> 
+<script src="dist/js/jquery-ui.min.js" type="text/javascript"></script>
+</body>
+</html>

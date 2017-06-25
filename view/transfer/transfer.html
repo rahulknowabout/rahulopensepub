@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, minimal-ui" />    
+  <title>Opens</title>
+  <link href="images/favicon.ico" rel="icon" type="image/ico" />
+  <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="css/animate.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#top_part").load("inc/top_part.html");
+  $("#main_header").load("inc/header.html"); 
+  $("#main_footer").load("inc/footer.html"); 
+});
+</script>    
+</head>
+<body class="page-banner">
+<section id="top_part"></section>
+<header id="main_header"></header>
+<div class="advisor-banner-header">
+			<div class="advisor-background-banner" style="background: url('images/page_bg.jpg') no-repeat center 100%; background-size: cover;">
+				<div class="advisor-title-banner-header">
+					<div class="container">
+                    <div class="page_inside">
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-home"></i></a></li>
+                        <li>My info</li>
+                    </ul>
+                    <h1>My info</h1>
+					</div>
+                    </div>
+				</div> 
+			</div> 
+		</div>    
+<section class="main-content">
+    <div class="container">
+        <div class="member_page">
+            <h1>My <b>info</b></h1>
+            <p>You can edit your membership information.</p>
+            <div class="Form_Inside">
+            <form role="form" class="form-horizontal">
+                <h2>My info</h2>
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 col-lg-2" for="inputName">Name</label>
+                  <div class="col-md-4 col-sm-7"><input type="text" class="form-control" id="inputName" placeholder="John Smith"></div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 col-lg-2" for="inputEmail1">Email</label>
+                  <div class="col-md-4 col-sm-7"><input type="email" class="form-control" id="inputEmail1" placeholder="johnsmith@email.com"></div>
+                </div>
+                <div class="form-group btn_add">
+                  <label class="col-sm-4 col-md-3 col-lg-2">Password</label>
+                    <div class="col-md-4 col-sm-7">
+                    <a href="#" class="btn btn-info">Change password</a>
+                </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 col-lg-2" for="country">Country</label>
+                    <div class="col-md-4 col-sm-7">
+                    <select class="form-control" id="country">
+                    <option>South Korea</option>
+                    <option>America</option>
+                    <option>India</option>
+                    <option>Australia</option>
+                  </select>
+                </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 col-lg-2" for="level">Level</label>
+                    <div class="col-md-4 col-sm-7">
+                    <p>L2</p>
+                </div>
+                </div>                
+                <div style="height:20px;"></div>
+                <h2>Company info</h2>
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 col-lg-2" for="Cname">Company name</label>
+                  <div class="col-sm-7"><input type="text" class="form-control" id="Cname" placeholder="DRM inside Co., Ltd"></div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 col-lg-2" for="Caddress">Company address</label>
+                  <div class="col-sm-7"><input type="text" class="form-control" id="Caddress" placeholder="105, Jungdae-ro, Songpa-gu, Seoul, Republic of Korea"></div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 col-lg-2" for="CPnumber">Company phone number</label>
+                  <div class="col-sm-7"><input type="text" class="form-control" id="CPnumber" placeholder="+82-2-430-7267"></div>
+                </div> 
+                <div class="form-group btn_add">
+                  <label class="col-sm-4 col-md-3 col-lg-2">Transfer of <br/>membership rights</label>
+                    <div class="col-md-4 col-sm-7">
+                    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#transfer_membership">Permission for transfer</a>
+                </div>
+                </div>                
+                <div style="height:70px;" class="Mobile_space"></div>
+                <div class="form-group text-center">
+                  <div class="btns_list">
+                   <a href="#" class="btn btn-info btn-outline">Cancel</a>
+                  </div>
+                  <div class="btns_list">
+                      <a href="#" class="btn btn-info">Save</a>
+                  </div>                    
+                </div>
+              </form> 
+            </div>
+        </div>
+    </div>
+</section>    
+<footer id="main_footer" class="main-footer"></footer>
+<!-- Modal -->
+<div class="modal fade" id="transfer_membership" role="dialog">
+<div class="modal-dialog">
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header text-center">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h3 class="modal-title"><b>Transfer</b> of membership rights</h3>
+        <div class="modal-pp out_space text-left">
+        <p>Enter the email address (ID) and name of the person you want to transfer the membership to.</p>
+<p>The person to transfer the membership rights must be on the OPENS homepage,
+It is necessary to match the information created at the time of membership registration.</p>
+<p><b>If you apply for membership transfer, the transfer will be completed by the administrator's final approval. Members who have applied for membership transfer after final approval by the administrator are adjusted to? L1 and can no longer use the Download menu.</b></p>
+<p><b>Whether or not processing will be sent by email.</b></p>
+        </div>
+        <div style="height:20px;"></div>
+        <form method="post">
+        <div class="form-group">
+            <input class="form-control" id="name" placeholder="Name" required="" type="text">
+          </div>   
+       <div class="form-group">
+        <input class="form-control" id="email" placeholder="Email" required="" type="email">
+      </div>  
+      <div style="height:20px;"></div>
+        <button type="button" class="btn btn-info" data-dismiss="modal">Apply for membership transfer</button>
+     </form>
+    </div>
+  </div>
+</div>
+</div>    
+</body>
+</html>

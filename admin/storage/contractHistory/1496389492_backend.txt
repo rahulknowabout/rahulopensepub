@@ -1,0 +1,25 @@
+db and username 
+:backendusersyann
+
+ 	
+
+Password: 
+
+JdnnY!4d@
+
+PHPMYADMIN
+https://sg2nlsmysqladm1.secureserver.net/grid55/1
+
+
+Hostname
+backendusersyann.db.10968206.hostedresource.com
+
+
+URL:http://backend.syann.com/
+
+D:\Hosting\10968206\html\SyannSubDomain\backend\devproject\lib\scripts\php\all
+
+
+CREATE TABLE `opens_epub_book_db`.`opens_product` ( `product_id` INT(11) NOT NULL AUTO_INCREMENT , `parent_product_id` INT(11) NOT NULL , `product_reg_date` VARCHAR(300) NOT NULL , `product_type` VARCHAR(300) NOT NULL , `product_name` TINYINT(300) NOT NULL , `product_ios` TINYINT NOT NULL , `product_android` TINYINT NOT NULL , `product_windows` TINYINT NOT NULL , `product_linux` TINYINT NOT NULL , `product_osx` TINYINT NOT NULL , `product_file` VARCHAR(300) NOT NULL , `product_release_note` VARCHAR(300) NOT NULL , `product_version` VARCHAR(300) NOT NULL , `product_uploaded_time` VARCHAR(300) NOT NULL , `product_user_synchronization` VARCHAR(300) NOT NULL , PRIMARY KEY (`product_id`)) ENGINE = InnoDB;
+
+Knoll-Ganeessh1!

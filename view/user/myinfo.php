@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, minimal-ui" />    
+  <title>Opens</title>
+  <link href="../../images/favicon.ico" rel="icon" type="image/ico" />
+  <script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src=".../../js/bootstrap.min.js"></script>
+  <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="../../css/animate.css" type="text/css" rel="stylesheet" />
+  <link href="../../css/style.css" type="text/css" rel="stylesheet" />
+<!--<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#top_part").load("inc/top_part.html");
+  $("#main_header").load("inc/header.html"); 
+  $("#main_footer").load("inc/footer.html"); 
+});
+</script>  -->  
+</head>
+<body class="page-banner">
+<section id="top_part"><?php require_once('../top_part/top_part.php');?></section>
+<header id="main_header"><?php require_once('../header/header.php'); ?></header>
+<div class="advisor-banner-header">
+			<div class="advisor-background-banner" style="background: url('../../images/page_bg.jpg') no-repeat center 100%; background-size: cover;">
+				<div class="advisor-title-banner-header">
+					<div class="container">
+                    <div class="page_inside">
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-home"></i></a></li>
+                        <li>My info</li>
+                    </ul>
+                    <h1>My info</h1>
+					</div>
+                    </div>
+				</div> 
+			</div> 
+		</div>    
+<section class="main-content">
+    <div class="container">    
+        <div class="member_page">
+            <h1>Product</h1>
+            <p>OPENS DRM consists of the following products. The functions of each product are as follows.</p>
+            <div class="Form_Inside">
+			
+            </div>
+        </div>
+    </div>
+</section>    
+<footer id="main_footer" class="main-footer"><?php require_once('../footer/footer.php'); ?></footer>
+</body>
+</html>

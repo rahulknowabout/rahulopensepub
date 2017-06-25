@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, minimal-ui" />    
+  <title>Opens</title>
+  <link href="images/favicon.ico" rel="icon" type="image/ico" />
+  <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="css/animate.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+ 
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#top_part").load("inc/top_part.html");
+  $("#main_header").load("inc/header.html"); 
+  $("#main_footer").load("inc/footer.html"); 
+});
+</script>
+    
+</head>
+<body>
+<section id="top_part"></section>
+<header id="main_header"></header>
+<section class="main-content">
+    <div class="container">
+        <div class="box register-box">
+           <h1><b>Create</b> account</h1>
+             <form>
+              <h2>Mandatory field</h2>
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                  <span class="msg okay"><i class="fa fa-check-circle"></i></span>
+              </div>
+				   <script type="text/javascript">
+					$(document).ready(function(){
+						$('[data-toggle="popover"]').popover({
+							placement : 'top',
+							trigger : 'hover'
+						});
+					});
+					</script>
+			
+              <div class="input-group2">
+                  <div class="form-group">
+                   <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+				   <span class="msg info">
+                      <a href="javascript:;" data-placement="top" data-toggle="popover" title="" data-content="Email should be done properly" data-original-title="Your email must have :"><img src="images/info_icon_small.png" alt="" title=""></a></span>
+					  <span class="msg okay"><i class="fa fa-check-circle"></i></span>
+                  </div>
+                  <div class="form-group"> <input type="password" class="form-control" id="repeatpwd" placeholder="Re-enter the Password" required>
+                  <span class="msg not_okay"><i class="fa fa-times-circle"></i></span>
+                   </div></div> 
+              <div style="height:20px;"></div>
+              <h2 class="btxt">Optional Field</h2>
+               <div class="form-group">
+                  <select class="form-control" id="country">
+                    <option>South Korea</option>
+                    <option>America</option>
+                    <option>India</option>
+                    <option>Australia</option>
+                  </select>
+                </div> 
+                 <div style="height:20px;"></div>
+              <button type="submit" class="btn btn-info btn-lg btn-block">Create your account</button>
+            </form> 
+            <div class="create_note"><p>By creating an account, you agree to OPENS’s <a href="conditionsofuse.html">Conditions of Use</a> and <a href="privacy_notice.html">Privacy Notice</a>.</p></div>
+        </div>
+    </div>
+</section>    
+<footer id="main_footer" class="main-footer"></footer>
+</body>
+</html>

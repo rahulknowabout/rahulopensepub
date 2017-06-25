@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin | FAQ</title>
+  <link href="dist/img/favicon.ico" rel="icon" type="/ico" />  
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+  <!-- Main style -->
+  <link rel="stylesheet" href="dist/css/style.css">
+   
+       
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+ <!-- Header -->
+ <header id="main_header" class="main-header"></header>
+ <!-- Left Sidebar -->
+ <aside id="main_sidebar" class="main-sidebar"></aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1><b>Notice</b></h1>
+ 
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+ 
+	<div class="Form_Inside management_page">
+	<div class="member_page accordion_style notice_table edit_data">
+	<div class="table-responsive">
+	  <table class="table">
+	  <tr>
+		<th class="gray">Type</th>
+		<td>
+			<div class="form-group2">
+				<input class="form-control" id="inputName" type="text" placeholder="Go back to previous screen">
+			</div>
+		</td>
+	  </tr>
+	  <tr>
+		<th class="gray">Date</th>
+		<td>
+			<div class="form-group2">
+				<div class="start_date ContractDate">
+					<input id="ContractDate" class="form-control" placeholder="DD/MM/YYYY" />
+					<i class="fa custom_icon"><img src="dist/img/calendar_icon.png" alt="" title=""></i>
+				</div>
+			</div>
+		</td>
+	  </tr>
+	  <tr>
+		<th class="gray">Contents</th>
+		<td>
+			<textarea id="editor1" name="editor1" rows="20" cols="80">Second, users can apply the powerful capabilities of Auto Campaigns to their mobile app. Auto Campaigns lets 
+users set their marketing on autopilot by establishing rules and their subsequent actions that are automatically initiated when certain conditions are met. For example, users can now automatically send a reminder to individuals who haven't opened a message, a week after it was sent, or a coupon exactly 48 hours before each member's actual birthday. They can send a stronger coupon to VIP customers who haven't redeemed the first one in 2 weeks. Or, they can trigger automatic reminders to be sent a week after the qualifying purchase about 
+being only 1 point away from a prize. "These new updates greatly enhance how our users can use their mobile apps," said Ken Rhie, the CEO of Trumpia. "Opening it up to iPhone users nearly doubles the potential downloads, and Auto Campaigns will save any Trumpia user time and energy by automating marketing tasks."
+</textarea> 
+		</td>
+	  </tr>	
+ 	  
+	</table>
+	</div>
+<div class="row footer_btn">
+<div class="col-sm-4">
+  <div class="pull-left">
+   <a href="customer_management.html" class="btn btn-outline">Back to List</a>
+  </div>
+  </div>
+  <div class="col-sm-8">
+  <div class="pull-right">
+	  <a href="#" class="btn btn-info">Edit</a>
+  </div>				
+</div>
+</div>
+</div>		  
+		</div> 			
+ 
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+ 
+<footer id="main_footer" class="main-footer"></footer>
+  <!-- change level Modal -->
+  
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript"> 
+jQuery(document).ready(function(){
+  jQuery("#main_header").load("inc/header.html"); 
+  jQuery("#main_sidebar").load("inc/LeftSidebar.html"); 
+  jQuery("#main_footer").load("inc/footer.html"); 
+});
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#startdate").datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+            $("#enddate").datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+            $("#ContractDate").datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+            $("#licensestartdate").datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+            $("#licenseenddate").datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+
+            $('.fa-calendar').click(function() {
+                //alert("d");
+                //$(this).closest('.inline_form_date').find('.datepicker-custom').addClass('test');
+                var datepickerID = $(this).parent().find('input').attr('id');
+                $("#" + datepickerID).focus();
+            });
+'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
+    CKEDITOR.replace('editor1');
+    //bootstrap WYSIHTML5 - text editor
+    $(".textarea").wysihtml5();
+        });
+    </script>
+
+
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- SlimScroll 1.3.0 -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- ChartJS 1.0.1 -->
+<script src="plugins/chartjs/Chart.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard2.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+ 
+<link type="text/css" rel="stylesheet" href="dist/css/jquery-ui.css">
+<script src="dist/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="plugins/ckeditor/ckeditor.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+
+</body>
+</html>

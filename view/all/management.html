@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, minimal-ui" />
+    <title>Opens</title>
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/animate.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" /> </head>
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#top_part").load("inc/top_part.html");
+  $("#main_header").load("inc/header.html"); 
+  $("#main_footer").load("inc/footer.html"); 
+});
+</script>    
+</head>
+<body class="page-banner">
+<section id="top_part"></section>
+<header id="main_header"></header>
+<div class="advisor-banner-header">
+<div class="advisor-background-banner" style="background: url('images/page_bg_management.jpg') no-repeat center 100%; background-size: cover;">
+<div class="advisor-title-banner-header">
+    <div class="container">
+        <div class="page_inside">
+            <ul class="breadcrumb">
+                <li><a href="#"><i class="fa fa-home"></i></a></li>
+                <li>Management</li>
+            </ul>
+            <h1>Management</h1> </div>
+    </div>
+</div>
+</div>
+</div>
+<section class="main-content">
+<div class="Form_Inside management_page">
+<div class="container">
+<ul class="nav nav-tabs">
+    <li class="active">
+        <a data-toggle="tab" href="#certificate_issuance_history">
+            <h3>
+			<span class="heading_icon certificate_icon"></span>
+			Certificate Issuance History</h3> 
+			</a>
+    </li>
+    <li>
+        <a data-toggle="tab" href="#license_issuance_history">
+            <h3>
+			<span class="heading_icon license_icon"></span>
+			License Issuance History</h3> 
+			</a>
+    </li>
+    <li>
+        <a data-toggle="tab" href="#statistics">
+            <h3>
+			<span class="heading_icon statistics_icon"></span>
+			Statistics</h3>
+			</a>
+    </li>	
+</ul>
+<div class="tab-content">
+	<div id="certificate_issuance_history" class="tab-pane fade in active">
+		<div class="member_page">
+			<h1>Certificate Issuance History</h1>
+			<div class="filter_box">
+				<div class="filter_data">
+					<form method="post" action="#">
+						<div class="form-group row">
+							<label class="col-sm-3">Period Search</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="start_date">
+									<label>Start Date</label>
+									<input id="startdate" class="form-control" placeholder="21 / 02 / 2017" />
+									<i class="fa custom_icon"><img src="images/calendar_icon.png" alt=""title="" /></i>
+								</div>
+								<span class="ico_tr">~</span>
+								<div class="end_date">
+									<label>End Date</label>
+									<input id="enddate" class="form-control" placeholder="DD/MM/YYYY" />
+									<i class="fa custom_icon"><img src="images/calendar_icon.png" alt=""title="" /></i>
+								</div>	
+							 </div>	
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-3">Certificate Type</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="row">
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<input type="radio" value="All" name="CertificateType" id="All" checked />
+										<label for="All" class="btn btn-outline">All</label>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<input type="radio" value="User Type" name="CertificateType" id="UserType" />
+										<label for="UserType" class="btn btn-outline">User Type</label>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<input type="radio" value="Device Type" name="CertificateType" id="DeviceType" />
+										<label for="DeviceType" class="btn btn-outline">User Type</label>
+									</div>									
+								</div>
+							 </div>	
+						</div>
+						<div class="form-group row last">
+							<label class="col-sm-3">User ID</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="row">
+									<div class="col-sm-8 col-xs-7">
+										<input class="form-control" id="inputName" type="text">
+									</div>
+									<div class="col-sm-4 col-xs-5">
+										<button type="submit" class="btn btn-info btn-lg btn-block">Search</button>
+									</div>
+								</div>
+							 </div>	
+						</div>						
+					</form>
+				</div>
+			</div>
+			<div class="Form_Inside certificate_table">
+            <div class="table-responsive">
+			<table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Issue Date ▲▼</th>
+                    <th>User ID</th>
+                    <th>Certificate Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>114</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>golden74</td>
+                    <td>User</td>
+                  </tr>
+                  <tr>
+                    <td>113</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>calendar8</td>
+                    <td>Device(ios8.1)</td>
+                  </tr>
+                  <tr>
+                    <td>112</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>99apple</td>
+                    <td>User</td>
+                  </tr>
+                  <tr>
+                    <td>111</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>book2go</td>
+                    <td>User</td>
+                  </tr>
+                  <tr>
+                    <td>110</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>khl8432</td>
+                    <td>Device(android4.1.2)</td>
+                  </tr>
+                  <tr>
+                    <td>109</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>hyeryun12</td>
+                    <td>User</td>
+                  </tr>
+                  <tr>
+                    <td>108</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>jtbc17</td>
+                    <td>Device(android4.1.2)</td>
+                  </tr>
+                  <tr>
+                    <td>107</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>live87521</td>
+                    <td>Device(android4.1.2)</td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td>106</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>khl8432</td>
+                    <td>Device(android4.1.2)</td>
+                  </tr>
+                  <tr>
+                    <td>105</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>hyeryun12</td>
+                    <td>User</td>
+                  </tr>
+                  <tr>
+                    <td>104</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>jtbc17</td>
+                    <td>Device(android4.1.2)</td>
+                  </tr>
+                  <tr>
+                    <td>103</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>live87521</td>
+                    <td>Device(android4.1.2)</td>
+                  </tr>                 
+                </tbody>
+              </table>
+			  </div>
+            <nav aria-label="Page navigation example">
+              <div class="text-center">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                  </a>
+                </li>
+              </ul>
+                </div>
+            </nav>			  
+		</div> 
+		</div> 
+	</div>
+	<div id="license_issuance_history" class="tab-pane fade">
+		<div class="member_page">
+			<h1>License Issuance History</h1>
+			<div class="filter_box">
+				<div class="filter_data">
+					<form method="post" action="#">
+						<div class="form-group row">
+							<label class="col-sm-3">Period Search</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="start_date">
+									<label>Start Date</label>
+									<input id="licensestartdate" class="form-control" placeholder="21 / 02 / 2017" />
+									<i class="fa custom_icon"><img src="images/calendar_icon.png" alt=""title="" /></i>
+								</div>
+								<span class="ico_tr">~</span>
+								<div class="end_date">
+									<label>End Date</label>
+									<input id="licenseenddate" class="form-control" placeholder="DD/MM/YYYY" />
+									<i class="fa custom_icon"><img src="images/calendar_icon.png" alt=""title="" /></i>
+								</div>	
+							 </div>	
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-3">Certificate Type</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="row">
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<input type="radio" value="All" name="CertificateType" id="LicenseAll" checked />
+										<label for="LicenseAll" class="btn btn-outline">All</label>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<input type="radio" value="User Type" name="CertificateType" id="LicenseUserType" />
+										<label for="LicenseUserType" class="btn btn-outline">User Type</label>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<input type="radio" value="Device Type" name="CertificateType" id="LicenseDeviceType" />
+										<label for="LicenseDeviceType" class="btn btn-outline">User Type</label>
+									</div>									
+								</div>
+							 </div>	
+						</div>
+						<div class="form-group row last">
+							<label class="col-sm-3">User ID</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="row">
+									<div class="col-sm-8 col-xs-7">
+										<input class="form-control" id="inputName" type="text">
+									</div>
+									<div class="col-sm-4 col-xs-5">
+										<button type="submit" class="btn btn-info btn-lg btn-block">Search</button>
+									</div>
+								</div>
+							 </div>	
+						</div>						
+					</form>
+				</div>
+			</div>
+			<div class="Form_Inside license_table">
+            <div class="table-responsive">
+			<table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Issue Date ▲▼</th>
+                    <th>User ID</th>
+                    <th>Target Type</th>
+                    <th>License ID</th>
+                    <th>Book name</th>	
+                    <th>Price (KRW)</th>						
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>114</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>golden74</td>
+                    <td>Device</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>					
+                  </tr>
+                  <tr>
+                    <td>113</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>calendar8</td>
+                    <td>Device(ios8.1)</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>112</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>99apple</td>
+                    <td>User</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>111</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>book2go</td>
+                    <td>User</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>110</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>khl8432</td>
+                    <td>Device(android4.1.2)</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>109</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>hyeryun12</td>
+                    <td>User</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>108</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>jtbc17</td>
+                    <td>Device(android4.1.2)</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>107</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>live87521</td>
+                    <td>Device(android4.1.2)</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td>106</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>khl8432</td>
+                    <td>Device(android4.1.2)</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>105</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>hyeryun12</td>
+                    <td>User</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>104</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>jtbc17</td>
+                    <td>Device(android4.1.2)</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>
+                  <tr>
+                    <td>103</td>
+                    <td>2015.08.15 00:00:00</td>
+                    <td>live87521</td>
+                    <td>Device(android4.1.2)</td>
+                    <td>47eb0c81023safi38451de….</td>
+                    <td>Snow on Christmas - name...</td>
+                    <td>30,000,000</td>						
+                  </tr>                 
+                </tbody>
+              </table>
+			  </div>
+            <nav aria-label="Page navigation example">
+              <div class="text-center">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                  </a>
+                </li>
+              </ul>
+                </div>
+            </nav>			  
+		</div> 
+		</div> 
+	</div>
+	<div id="statistics" class="tab-pane fade">
+			<div class="member_page">
+			<h1>Statistics</h1>
+			<div class="filter_box">
+				<div class="filter_data">
+					<form method="post" action="#">
+						<div class="form-group row">
+							<label class="col-sm-3">&nbsp;</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="row">
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<a href="#" class="btn btn-outline">Monthly Statistics</a>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										<a href="#" class="btn btn-info">Daily Statistics</a>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">&nbsp;</div>									
+								</div>
+							 </div>	
+						</div>
+						<div class="form-group row filter_data last">
+							<label class="col-sm-3">&nbsp;</label>
+							<div class="col-md-9 col-sm-12">
+								<div class="row">
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										  <select class="form-control" id="year">
+										  <script>
+										  var myDate = new Date();
+										  var year = myDate.getFullYear();
+										  for(var i = 2016; i < year+1; i++){
+											  document.write('<option value="'+i+'">'+i+'</option>');
+										  }
+										  </script>
+										  </select>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">
+										  <select class="form-control" id="year">
+											<option value=''>--Select Month--</option>
+											<option selected value='1'>Janaury</option>
+											<option value='2'>February</option>
+											<option value='3'>March</option>
+											<option value='4'>April</option>
+											<option value='5'>May</option>
+											<option value='6'>June</option>
+											<option value='7'>July</option>
+											<option value='8'>August</option>
+											<option value='9'>September</option>
+											<option value='10'>October</option>
+											<option value='11'>November</option>
+											<option value='12'>December</option>
+										  </select>
+									</div>
+									<div class="col-sm-4 col-xs-4 Mobilebtn">&nbsp;</div>									
+								</div>
+							 </div>	
+						</div>						
+					</form>
+					
+				</div>
+			</div>
+			<div class="graph_row">
+				<h2><b>Daily Statistics</b> of 2016</h2>
+				<div class="Main_graph_area">
+					<img src="images/daily_graph.jpg" alt="" title="" class="img-responsive" />
+				</div>
+				<div class="Main_data_table">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Certificate Issuance History</th>
+										<th>License Issuance History</th>
+										<th>Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>11</td>
+										<td>11</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>11</td>
+										<td>11</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>12</td>
+										<td>12</td>
+										<td>3</td>
+									</tr>	
+									<tr>
+										<td>4</td>
+										<td>13</td>
+										<td>13</td>
+										<td>4</td>
+									</tr>		
+									<tr>
+										<td>5</td>
+										<td>12</td>
+										<td>12</td>
+										<td>5</td>
+									</tr>			
+									<tr>
+										<td>6</td>
+										<td>10</td>
+										<td>10</td>
+										<td>6</td>
+									</tr>		
+									<tr>
+										<td>7</td>
+										<td>9</td>
+										<td>9</td>
+										<td>7</td>
+									</tr>		
+									<tr>
+										<td>8</td>
+										<td>8</td>
+										<td>8</td>
+										<td>8</td>
+									</tr>		
+									<tr>
+										<td>9</td>
+										<td>45</td>
+										<td>45</td>
+										<td>9</td>
+									</tr>		
+									<tr>
+										<td>10</td>
+										<td>10</td>
+										<td>10</td>
+										<td>10</td>
+									</tr>	
+									<tr>
+										<td>11</td>
+										<td>12</td>
+										<td>12</td>
+										<td>11</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>5</td>
+										<td>5</td>
+										<td>12</td>
+									</tr>	
+									<tr>
+										<td>13</td>
+										<td>5</td>
+										<td>5</td>
+										<td>13</td>
+									</tr>	
+									<tr>
+										<td>14</td>
+										<td>5</td>
+										<td>5</td>
+										<td>14</td>
+									</tr>	
+									<tr>
+										<td>15</td>
+										<td>5</td>
+										<td>5</td>
+										<td>15</td>
+									</tr>										
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Certificate Issuance History</th>
+										<th>License Issuance History</th>
+										<th>Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>16</td>
+										<td>11</td>
+										<td>11</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>17</td>
+										<td>11</td>
+										<td>11</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>18</td>
+										<td>12</td>
+										<td>12</td>
+										<td>3</td>
+									</tr>	
+									<tr>
+										<td>19</td>
+										<td>13</td>
+										<td>13</td>
+										<td>4</td>
+									</tr>		
+									<tr>
+										<td>20</td>
+										<td>12</td>
+										<td>12</td>
+										<td>5</td>
+									</tr>			
+									<tr>
+										<td>21</td>
+										<td>10</td>
+										<td>10</td>
+										<td>6</td>
+									</tr>		
+									<tr>
+										<td>22</td>
+										<td>9</td>
+										<td>9</td>
+										<td>7</td>
+									</tr>		
+									<tr>
+										<td>23</td>
+										<td>8</td>
+										<td>8</td>
+										<td>8</td>
+									</tr>		
+									<tr>
+										<td>24</td>
+										<td>45</td>
+										<td>45</td>
+										<td>9</td>
+									</tr>		
+									<tr>
+										<td>25</td>
+										<td>10</td>
+										<td>10</td>
+										<td>10</td>
+									</tr>	
+									<tr>
+										<td>26</td>
+										<td>12</td>
+										<td>12</td>
+										<td>11</td>
+									</tr>
+									<tr>
+										<td>27</td>
+										<td>5</td>
+										<td>5</td>
+										<td>12</td>
+									</tr>	
+									<tr>
+										<td>28</td>
+										<td>5</td>
+										<td>5</td>
+										<td>13</td>
+									</tr>	
+									<tr>
+										<td>29</td>
+										<td>5</td>
+										<td>5</td>
+										<td>14</td>
+									</tr>	
+									<tr>
+										<td>30</td>
+										<td>5</td>
+										<td>5</td>
+										<td>15</td>
+									</tr>										
+								</tbody>
+							</table>
+						</div>
+					</div>					
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</section>
+<footer id="main_footer" class="main-footer"></footer>
+<link type="text/css" rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+		$("#startdate").datepicker({ dateFormat: 'dd/mm/yy' });
+		$("#enddate").datepicker({ dateFormat: 'dd/mm/yy' });
+		$("#licensestartdate").datepicker({ dateFormat: 'dd/mm/yy' });
+		$("#licenseenddate").datepicker({ dateFormat: 'dd/mm/yy' });
+		
+		$('.fa-calendar').click(function(){
+			//alert("d");
+			//$(this).closest('.inline_form_date').find('.datepicker-custom').addClass('test');
+			var datepickerID = $(this).parent().find('input').attr('id');
+			$("#"+datepickerID).focus();
+		});
+		
+	});
+</script>   
+</body>
+
+</html>

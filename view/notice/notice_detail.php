@@ -1,0 +1,93 @@
+<?php include('../../admin/modal/notice/notice.php');
+
+if(isset($_GET['id']) && $_GET['id'] > 0 ) {
+	$noticedetail = noticeReadByid($_GET['id']);
+	//echo "<pre>";
+	//print_r($noticedetail);
+	//die;	
+}else{
+	$noticedetail = "";
+}
+if(isset($noticedetail) && is_array($noticedetail) && count($noticedetail)>0) {
+	$notice_content_html = stripslashes(stripslashes($noticedetail['notice_content_html']));
+	$notice_date = $noticedetail['notice_date'];
+	$notice_title = $noticedetail['notice_title'];
+}else{
+	$notice_content_html = "";
+	$notice_date = "";
+	$notice_title = "";
+}
+?>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, minimal-ui" />    
+  <title>Opens</title>
+  <link href="../../images/favicon.ico" rel="icon" type="image/ico" />
+  <script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="../../css/animate.css" type="text/css" rel="stylesheet" />
+  <link href="../../css/style.css" type="text/css" rel="stylesheet" />
+<!--<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#top_part").load("inc/top_part.html");
+  $("#main_header").load("inc/header.html"); 
+  $("#main_footer").load("inc/footer.html"); 
+});
+</script>-->    
+</head>
+<body class="page-banner">
+<section id="top_part"><?php require_once('../top_part/top_part.php');?></section>
+<header id="main_header"><?php require_once('../header/header.php'); ?></header>
+<div class="advisor-banner-header">
+			<div class="advisor-background-banner" style="background: url('../../images/page_bg_notice.jpg') no-repeat center 100%; background-size: cover;">
+				<div class="advisor-title-banner-header">
+					<div class="container">
+                    <div class="page_inside">
+                    <ul class="breadcrumb">
+                        <li><a href="../../index.php"><i class="fa fa-home"></i></a></li>
+                        <li><a href="#">Notice</a></li>
+                        <li>Notice</li>
+                    </ul>
+                    <h1>Notice</h1>
+					</div>
+                    </div>
+				</div> 
+			</div> 
+		</div>    
+<section class="main-content">
+    <div class="container"> 
+        <div class="member_page">
+            <h1>Notice</b></h1>
+            <div class="Form_Inside notice_table">
+				<div class="table-responsive">
+				<table class="table">
+					<tbody>
+					  <tr>
+						<td class="title_table"><?php echo $notice_title; ?></td>
+						<td class="text-right"><?php echo $notice_date; ?></td>
+					  </tr>              
+					</tbody>
+				  </table>
+				</div> 
+			<div class="data_notice">
+				<div class="Cover_notice">
+					<!--<img src="../../images/notice_cover.jpg" alt="" title="" class="img-responsive" />
+				</div>
+				<p>Second, users can apply the powerful capabilities of Auto Campaigns to their mobile app. Auto Campaigns lets users set their marketing on autopilot by establishing rules and their subsequent actions that are automatically initiated when certain conditions are met. For example, users can now automatically send a reminder to individuals who haven’t opened a message, a week after it was sent, or a coupon exactly 48 hours before each member’s actual birthday. They can send a stronger coupon to VIP customers who haven’t redeemed the first one in 2 weeks. Or, they can trigger automatic reminders to be sent a week after the qualifying purchase about being only 1 point away from a prize.“These new updates greatly enhance how our users can use their mobile apps,” said Ken Rhie, the CEO of Trumpia. “Opening it up to iPhone users nearly doubles the potential downloads, and Auto Campaigns will save any Trumpia user time and energy by automating marketing tasks.”</p>
+
+<p>Second, users can apply the powerful capabilities of Auto Campaigns to their mobile app. Auto Campaigns lets users set their marketing on autopilot by establishing rules and their subsequent actions that are automatically initiated when certain conditions are met. For example, users can now automatically send a reminder to individuals who haven’t opened a message, a week after it was sent, or a coupon exactly 48 hours before each member’s actual birthday. They can send a stronger coupon to VIP customers who haven’t redeemed the first one in 2 weeks. Or, they can trigger automatic reminders to be sent a week after the qualifying purchase about being only 1 point away from a prize.“These new updates greatly enhance how our users can use their mobile apps,” said Ken Rhie, the CEO of Trumpia. “Opening it up to iPhone users nearly doubles the potential downloads, and Auto Campaigns will save any Trumpia user time and energy by automating marketing tasks.”their subsequent actions that are automatically initiated when certain conditions are met. For example, users can now automatically send a reminder to individuals who </p>-->
+<?php echo $notice_content_html;  ?>
+            </div>
+			<div class="Encrypt_eBook_btn Back_notice_list">
+				<a href="notice.php" class="btn btn-info btn-lg btn-block">Back to List</a>
+			</div>
+		</div>
+        </div>
+    </div>
+</section>    
+<footer id="main_footer" class="main-footer"><?php require_once('../footer/footer.php'); ?></footer>
+</body>
+</html>

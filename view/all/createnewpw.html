@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, minimal-ui" />    
+  <title>Opens</title>
+  <link href="images/favicon.ico" rel="icon" type="image/ico" />
+  <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="css/animate.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#top_part").load("inc/top_part.html");
+  $("#main_header").load("inc/header.html"); 
+  $("#main_footer").load("inc/footer.html"); 
+});
+</script>    
+</head>
+<body>
+<section id="top_part"></section>
+<header id="main_header"></header>
+<section class="main-content">
+    <div class="container">
+        <div class="box verify-box f_box_password update_password">
+            <h1>Create <b>new password</b></h1>
+             <p>Please enter your new password.</p>
+            <form method="post">
+                <div class="input-group2">
+                  <div class="form-group">
+                   <input class="form-control" id="pwd" placeholder="Password" required type="password">
+                      <span class="msg info"><a href="javascript:;" data-placement="top" data-toggle="popover" title="Your password must have :" data-content="English alphanumeric characters within 8 to 20 characters
+"><i class="fa fa-info-circle"></i></a></span>
+                      <span class="msg okay"><i class="fa fa-check-circle"></i></span>
+                        <script>
+                            $(document).ready(function(){
+                                $('[data-toggle="popover"]').popover();
+                            });
+                        </script>                       
+                  </div>
+                  <div class="form-group"> <input class="form-control" id="repeatpwd" placeholder="Re-enter the Password" required type="password">
+                  <span class="msg not_okay"><i class="fa fa-times-circle"></i></span>
+                   </div>
+            </div> 
+                <button type="submit" class="btn btn-info btn-lg btn-block">Save changes</button>
+            </form>
+            
+        </div>      
+    </div> 
+</section>    
+<footer id="main_footer" class="main-footer"></footer>
+</body>
+</html>

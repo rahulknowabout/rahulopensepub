@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Admin | Management</title>
+<link href="dist/img/favicon.ico" rel="icon" type="/ico" />
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- Theme style -->
+<link rel="stylesheet" href="dist/css/AdminLTE.css">
+<!-- Main style -->
+<link rel="stylesheet" href="dist/css/style.css">
+<link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+<!-- iCheck -->
+<link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+<!-- jqueryUI -->
+<link type="text/css" rel="stylesheet" href="dist/css/jquery-ui.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="plugins/iCheck/all.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+<!-- Header -->
+<header id="main_header" class="main-header"></header>
+<!-- Left Sidebar -->
+<aside id="main_sidebar" class="main-sidebar"></aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1><b>Manage Usage</b> History</h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="Form_Inside management_page">
+    <ul class="nav nav-tabs">
+      <li class="active"> <a data-toggle="tab" href="#certificate_issuance_history">
+        <h3> <span class="heading_icon certificate_icon"></span> <em>Certificate Issuance History</em></h3>
+        </a> </li>
+      <li> <a data-toggle="tab" href="#license_issuance_history">
+        <h3> <span class="heading_icon license_icon"></span> <em>License Issuance History</em></h3>
+        </a> </li>
+      <li> <a data-toggle="tab" href="#statistics">
+        <h3> <span class="heading_icon statistics_icon"></span> <em>Statistics</em></h3>
+        </a> </li>
+    </ul>
+    <div class="tab-content">
+      <div id="certificate_issuance_history" class="tab-pane fade in active">
+        <div class="member_page">
+          <div class="filter_box">
+            <div class="filter_data">
+              <form method="post" action="#">
+                <div class="form-group row">
+                  <label class="col-md-3 col-sm-12">Period Search</label>
+                  <div class="col-md-9 col-sm-12">
+                    <div class="start_date">
+                      <label>Start Date</label>
+                      <input id="startdate" class="form-control" placeholder="21/02/2017" />
+                      <i class="fa custom_icon"><img src="dist/img/calendar_icon.png" alt="" title="" /></i> </div>
+                    <span class="ico_tr">~</span>
+                    <div class="end_date">
+                      <label>End Date</label>
+                      <input id="enddate" class="form-control" placeholder="DD/MM/YYYY" />
+                      <i class="fa custom_icon"><img src="dist/img/calendar_icon.png" alt="" title="" /></i> </div>
+                  </div>
+                </div>
+                <div class="form-group row last">
+                  <label class="col-md-3 col-sm-12">Company Name</label>
+                  <div class="col-md-9 col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-9 col-xs-8 MobileMasterSpace MobileMasterFull">
+                        <input class="form-control" id="inputName" type="text">
+                      </div>
+                      <div class="col-sm-3 col-xs-4 MobileMasterFull">
+                        <button type="submit" class="btn btn-info btn-lg btn-block">Search</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="Form_Inside certificate_table">
+            <ul class="tabs_menu list_txt">
+              <li class="active"><a href="#">Packager Certificate Issuance History</a></li>
+              <li><a href="#">Certificate Issuance by Company</a></li>
+            </ul>
+            <div class="Certificate_Issuance Certificate_Issuance_tab1" id="Issuance_History">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Company Name</th>
+                      <th>Certificate Issuance Date</th>
+                      <th>Expiration Date</th>
+                      <th>Certificate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>114</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#CertificateView" data-toggle="modal" data-target="#CertificateView">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>113</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>112</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>111</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>110</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>109</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>108</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>107</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>106</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>105</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>104</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>103</td>
+                      <td>Jason Mraz</td>
+                      <td>2017.01.01</td>
+                      <td>2017.01.01</td>
+                      <td><a href="#">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <div class="text-center">
+                  <ul class="pagination">
+                    <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-left"></i></span> </a> </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-right"></i></span> </a> </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="Certificate_Issuance" id="Issuance_Company" style="display:none">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Company Name</th>
+                      <th># of Certificates Issued</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>114</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>113</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>112</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>111</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>110</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>109</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>108</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>107</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>106</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>105</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>104</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                    <tr>
+                      <td>103</td>
+                      <td><a href="#">eBook Store</a></td>
+                      <td>999,999</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <div class="text-center">
+                  <ul class="pagination">
+                    <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-left"></i></span> </a> </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-right"></i></span> </a> </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="license_issuance_history" class="tab-pane fade">
+        <div class="member_page">
+          <p class="infomail"><b>Company Name(ID)</b> : eBook Store(ebookstore@email.com)</p>
+          <div class="filter_box">
+            <div class="filter_data">
+              <form method="post" action="#">
+                <div class="form-group row">
+                  <label class="col-sm-3">Period Search</label>
+                  <div class="col-md-9 col-sm-12">
+                    <div class="start_date">
+                      <label>Start Date</label>
+                      <input id="licensestartdate" class="form-control" placeholder="21 / 02 / 2017" />
+                      <i class="fa custom_icon"><img src="dist/img/calendar_icon.png" alt="" title="" /></i> </div>
+                    <span class="ico_tr">~</span>
+                    <div class="end_date">
+                      <label>End Date</label>
+                      <input id="licenseenddate" class="form-control" placeholder="DD/MM/YYYY" />
+                      <i class="fa custom_icon"><img src="dist/img/calendar_icon.png" alt="" title="" /></i> </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3">Certificate Type</label>
+                  <div class="col-md-9 col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-4 Mobilebtn">
+                        <input value="All" name="CertificateType2" id="All2" checked="" type="radio">
+                        <label for="All2" class="btn btn-outline">All</label>
+                      </div>
+                      <div class="col-sm-4 col-xs-4 Mobilebtn">
+                        <input value="User Type" name="CertificateType2" id="UserType2" type="radio">
+                        <label for="UserType2" class="btn btn-outline">User Type</label>
+                      </div>
+                      <div class="col-sm-4 col-xs-4 Mobilebtn">
+                        <input value="Device Type" name="CertificateType2" id="DeviceType2" type="radio">
+                        <label for="DeviceType2" class="btn btn-outline">User Type</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row last">
+                  <label class="col-sm-3">User ID</label>
+                  <div class="col-md-9 col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-9 col-xs-8 MobileMasterSpace MobileMasterFull">
+                        <input class="form-control" id="UserName" type="text">
+                      </div>
+                      <div class="col-sm-3 col-xs-4 MobileMasterFull">
+                        <button type="submit" class="btn btn-info btn-lg btn-block">Search</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="Form_Inside license_table">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Certificate Type</th>
+                    <th>Iuuse Date</th>
+                    <th>Valid Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>114</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>113</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>112</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>111</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>110</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>109</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>108</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>107</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>106</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>105</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>104</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                  <tr>
+                    <td>103</td>
+                    <td>jason1234</td>
+                    <td>Jason Mraz</td>
+                    <td>User</td>
+                    <td>2017.01.01</td>
+                    <td>2017.01.01</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav aria-label="Page navigation example">
+              <div class="text-center">
+                <ul class="pagination">
+                  <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-left"></i></span> </a> </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-right"></i></span> </a> </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div id="statistics" class="tab-pane fade">
+        <div class="member_page">
+          <div class="filter_box">
+            <div class="filter_data">
+              <form method="post" action="#">
+                <div class="form-group row">
+                  <label class="col-sm-3 mobileHIde">&nbsp;</label>
+                  <div class="col-md-9 col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-6 Mobilebtn">
+                        <input type="radio" name="Statistics" id="MStatistics" checked />
+                        <label for="MStatistics" class="btn btn-outline">Monthly Statistics</label>
+                      </div>
+                      <div class="col-sm-4 col-xs-6 Mobilebtn">
+                        <input type="radio" name="Statistics" id="DStatistics" />
+                        <label for="DStatistics" class="btn btn-outline">Daily Statistics</label>
+                      </div>
+                      <div class="col-sm-4 col-xs-6 Mobilebtn mobileHIde">&nbsp;</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row filter_data last">
+                  <label class="col-sm-3 mobileHIde">&nbsp;</label>
+                  <div class="col-md-9 col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-6 Mobilebtn">
+                        <div class="select-style">
+                         <select class="form-control" id="year">
+                           <option value="0">2016</option>
+                           <option value="1">2017</option>
+                         </select>
+						  </div>
+                      </div>
+                      <div class="col-sm-4 col-xs-6 Mobilebtn">
+                        <div class="select-style">
+                          <select class="form-control" id="yearSET">
+                            <option value="">--Select Month--</option>
+                            <option value="1" selected>Janaury</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 col-xs-4 Mobilebtn mobileHIde">&nbsp;</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="graph_row" id="daily_data_store">
+            <h4><b>Daily Statistics</b> of January 2017</h4>
+            <div class="Main_graph_area"> <img src="dist/img/daily_graph.jpg" alt="" title="" class="img-responsive" /> </div>
+            <div class="Main_data_table daily_plan">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Certificates</th>
+                          <th>Licenses</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>111111</td>
+                          <td>111111</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>20054</td>
+                          <td>20054</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>154875</td>
+                          <td>154875</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>154875</td>
+                          <td>154875</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>10154</td>
+                          <td>10154</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>9561</td>
+                          <td>9561</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>9561</td>
+                          <td>9561</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>9561</td>
+                          <td>9561</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>1237</td>
+                          <td>1237</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>14547</td>
+                          <td>14547</td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>5457</td>
+                          <td>5457</td>
+                        </tr>
+                        <tr>
+                          <td>12</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                        <tr>
+                          <td>13</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                        <tr>
+                          <td>14</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                        <tr>
+                          <td>15</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Certificates</th>
+                          <th>Licenses</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>16</td>
+                          <td>111111</td>
+                          <td>111111</td>
+                        </tr>
+                        <tr>
+                          <td>17</td>
+                          <td>20054</td>
+                          <td>20054</td>
+                        </tr>
+                        <tr>
+                          <td>18</td>
+                          <td>154875</td>
+                          <td>154875</td>
+                        </tr>
+                        <tr>
+                          <td>19</td>
+                          <td>154875</td>
+                          <td>154875</td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td>10154</td>
+                          <td>10154</td>
+                        </tr>
+                        <tr>
+                          <td>21</td>
+                          <td>9561</td>
+                          <td>9561</td>
+                        </tr>
+                        <tr>
+                          <td>22</td>
+                          <td>9561</td>
+                          <td>9561</td>
+                        </tr>
+                        <tr>
+                          <td>23</td>
+                          <td>9561</td>
+                          <td>9561</td>
+                        </tr>
+                        <tr>
+                          <td>24</td>
+                          <td>1237</td>
+                          <td>1237</td>
+                        </tr>
+                        <tr>
+                          <td>25</td>
+                          <td>14547</td>
+                          <td>14547</td>
+                        </tr>
+                        <tr>
+                          <td>26</td>
+                          <td>5457</td>
+                          <td>5457</td>
+                        </tr>
+                        <tr>
+                          <td>27</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                        <tr>
+                          <td>28</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                        <tr>
+                          <td>29</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                        <tr>
+                          <td>30</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                        <tr>
+                          <td>31</td>
+                          <td>4578</td>
+                          <td>4578</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph_row" id="monthly_data_store" style="display:none;">
+            <h2><b>Monthly Statistics</b> of 2017</h2>
+            <div class="Main_graph_area"> <img src="dist/img/monthly_graph.jpg" alt="" title="" class="img-responsive" /> </div>
+            <div class="Main_data_table monthly_plan">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Month of the Year</th>
+                      <th>Certificate Issuance History</th>
+                      <th>License Issuance History</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Janaury</td>
+                      <td>111111</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>February</td>
+                      <td>20054</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>111111</td>
+                      <td>12</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>April</td>
+                      <td>20054</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>May</td>
+                      <td>111111</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>June</td>
+                      <td>20054</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>July</td>
+                      <td>111111</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>August</td>
+                      <td>20054</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>September</td>
+                      <td>111111</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>October</td>
+                      <td>20054</td>
+                      <td>45147</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>November</td>
+                      <td>111111</td>
+                      <td>5457</td>
+                      <td>99999</td>
+                    </tr>
+                    <tr>
+                      <td>December</td>
+                      <td>20054</td>
+                      <td>4578</td>
+                      <td>99999</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<div class="modal fade CertificateView" id="CertificateView" role="dialog">
+  <div class="modal-dialog"> 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title"><b>Certificate</b> Details</h3>
+        <div class="modal-pp">
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th class="gray">Company Name</th>
+                  <td>eBook Store</td>
+                </tr>
+                <tr>
+                  <th class="gray">Category</th>
+                  <td>Distributer</td>
+                </tr>
+                <tr>
+                  <th class="gray">Certificate issued</th>
+                  <td>2016.01.01</td>
+                </tr>
+                <tr>
+                  <th class="gray">Certificate expiration date</th>
+                  <td>2019.01.01</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="define_user">
+            <p>What is Lorem Ipsum? <br/>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Why do we use it? </br/> It is a long established fact that a reader will be distracted by the readable content of a page wh en looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like read able English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="main_footer" class="main-footer"> </footer>
+  
+  <!-- ./wrapper --> 
+</div>
+<!-- jQuery 2.2.3 --> 
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script> 
+<!-- Bootstrap 3.3.6 --> 
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	// header, footer and left part attachment
+	jQuery("#main_header").load("inc/header.html");
+	jQuery("#main_sidebar").load("inc/LeftSidebar.html");
+	jQuery("#main_footer").load("inc/footer.html");
+	
+	// Menu active function
+	jQuery(".sidebar-menu > li").click(function() {
+	  // remove classes from all
+	  jQuery(".sidebar-menu > li").removeClass("active");
+	  // add class to the one we clicked
+	  jQuery(this).addClass("active");
+	});
+	
+	$('select:focus').prev().css('background-color', '#eee');
+	
+	// Date function
+	$("#startdate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});
+	$("#enddate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});
+	$("#licensestartdate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});
+	$("#licenseenddate").datepicker({
+		dateFormat: 'dd/mm/yy'
+	});
+	
+	// Calender function
+	$('.fa-calendar').click(function() {
+		var datepickerID = $(this).parent().find('input').attr('id');
+		$("#" + datepickerID).focus();
+	});	
+	
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+	
+// Input file function
+	
+'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));	
+});
+</script> 
+
+<!-- AdminLTE App --> 
+<script src="dist/js/app.min.js"></script> 
+
+<!-- SlimScroll 1.3.0 --> 
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script> 
+<!-- iCheck 1.0.1 --> 
+<script src="plugins/iCheck/icheck.min.js"></script> 
+<!-- AdminLTE for demo purposes --> 
+<script src="dist/js/demo.js"></script> 
+<script src="dist/js/jquery-ui.min.js" type="text/javascript"></script>
+</body>
+</html>
